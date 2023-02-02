@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[BlogComment]
 (
 	[BlogCommentId] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [ParentBlogCommentId] INT NOT NULL, 
+    [ParentBlogCommentId] INT NULL, 
     [BlogId] INT NOT NULL, 
     [ApplicationUserId] INT NOT NULL, 
     [Content] VARCHAR(300) NOT NULL, 

@@ -58,12 +58,17 @@
     <Folder Include="Properties" />
     <Folder Include="BlogLab" />
     <Folder Include="BlogLab\Tables" />
+    <Folder Include="BlogLab\Views" />
+    <Folder Include="Aggregate" />
+    <Folder Include="Aggregate\Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="BlogLab\Tables\ApplicationUser.sql" />
     <Build Include="BlogLab\Tables\Photo.sql" />
     <Build Include="BlogLab\Tables\BlogComment.sql" />
     <Build Include="BlogLab\Tables\Blog.sql" />
+    <Build Include="Aggregate\Views\Blog.sql" />
+    <Build Include="Aggregate\Aggregate.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BlogLab.SQL.refactorlog" />
