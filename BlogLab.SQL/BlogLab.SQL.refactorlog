@@ -7,4 +7,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="PhotoId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d0e57f6f-1f09-431d-aa61-35aa27c59223" ChangeDateTime="02/02/2023 20:25:07">
+    <Property Name="ElementName" Value="[dbo].[Blog].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blog]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BlogId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f6753be6-ff55-4a74-aa53-79b0ce6c701a" ChangeDateTime="02/02/2023 20:30:53">
+    <Property Name="ElementName" Value="[dbo].[FK_Blog_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Blog]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Blog_Photo]" />
+  </Operation>
 </Operations>
