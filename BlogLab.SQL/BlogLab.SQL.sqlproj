@@ -62,7 +62,8 @@
   <ItemGroup>
     <Build Include="BlogLab\Tables\ApplicationUser.sql" />
     <Build Include="BlogLab\Tables\Photo.sql" />
-    <Build Include="Blog.sql" />
+    <Build Include="BlogLab\Tables\BlogComment.sql" />
+    <Build Include="BlogLab\Tables\Blog.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BlogLab.SQL.refactorlog" />

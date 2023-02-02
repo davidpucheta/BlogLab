@@ -21,4 +21,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_Blog_Photo]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="2da97840-54c3-4b01-9398-c2cda2115216" ChangeDateTime="02/02/2023 20:39:41">
+    <Property Name="ElementName" Value="[dbo].[BlogComment].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BlogComment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BlogCommentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b2e28e21-5220-4a22-9bab-2feee977def2" ChangeDateTime="02/02/2023 20:40:46">
+    <Property Name="ElementName" Value="[dbo].[BlogComment].[blogId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BlogComment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BlogId" />
+  </Operation>
 </Operations>
