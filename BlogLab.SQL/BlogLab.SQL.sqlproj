@@ -61,6 +61,7 @@
     <Folder Include="BlogLab\Views" />
     <Folder Include="Aggregate" />
     <Folder Include="Aggregate\Views" />
+    <Folder Include="BlogLab\Types" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="BlogLab\Tables\ApplicationUser.sql" />
@@ -70,6 +71,10 @@
     <Build Include="Aggregate\Views\Blog.sql" />
     <Build Include="Aggregate\Aggregate.sql" />
     <Build Include="Aggregate\Views\BlogComment.sql" />
+    <Build Include="BlogLab\Types\AccountType.sql" />
+    <Build Include="BlogLab\Types\PhotoType.sql" />
+    <Build Include="BlogLab\Types\BlogType.sql" />
+    <Build Include="BlogLab\Types\BlogCommentType.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BlogLab.SQL.refactorlog" />
