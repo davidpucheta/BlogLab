@@ -78,6 +78,7 @@
     <Build Include="BlogLab\Types\BlogCommentType.sql" />
     <Build Include="BlogLab\Stored Procedures\Account_GetByUsername.sql" />
     <Build Include="BlogLab\Stored Procedures\Account_Insert.sql" />
+    <Build Include="BlogLab\Stored Procedures\Blog_Delete.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BlogLab.SQL.refactorlog" />
