@@ -1,6 +1,16 @@
 ﻿CREATE PROCEDURE [dbo].[Account_GetByUsername]
-	@param1 int = 0,
-	@param2 int
+	@NormalizedUsername VARCHAR(20)
 AS
-	SELECT @param1, @param2
+	SELECT 
+		 [ApplicationUserId]
+		,[Username]
+		,[NormalizedUsername]
+		,[Email]
+		,[NormalizedEmail]
+		,[Fullname]
+		,[PasswordHash]
+	FROM 
+		[dbo].[ApplicationUser] AU
+	WHERE
+		AU.[NormalizedUsername] = @NormalizedUsername
 RETURN 0
