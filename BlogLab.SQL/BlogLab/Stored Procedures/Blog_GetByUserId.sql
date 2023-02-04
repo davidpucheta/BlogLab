@@ -10,7 +10,6 @@ AS
 		,B.[Content]
 		,B.[PublishDate]
 		,B.[UpdateDate]
-		,B.[ActiveInd]
 	FROM
 		[aggregate].[Blog] B
 	WHERE
