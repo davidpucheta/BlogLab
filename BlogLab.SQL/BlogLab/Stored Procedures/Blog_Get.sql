@@ -10,7 +10,6 @@ AS
         ,[PhotoId]
         ,[PublishDate]
         ,[UpdateDate]
-        ,[ActiveInd]
     FROM 
         [aggregate].[Blog] B 
     WHERE
