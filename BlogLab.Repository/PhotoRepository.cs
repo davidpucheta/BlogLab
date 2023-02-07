@@ -62,7 +62,7 @@ public class PhotoRepository : IPhotoRepository
         var dataTable = new DataTable();
         dataTable.Columns.Add("PublicId", typeof(string));
         dataTable.Columns.Add("ImageUrl", typeof(string));
-        dataTable.Columns.Add("Descruiption", typeof(string));
+        dataTable.Columns.Add("Description", typeof(string));
 
         dataTable.Rows.Add(
             photoCreate.PublicId,
