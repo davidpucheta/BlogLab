@@ -9,8 +9,13 @@
   <ItemGroup>
     <Folder Include="Blog\" />
     <Folder Include="BlogComment\" />
+    <Folder Include="Exception\" />
     <Folder Include="Settings\" />
     <Folder Include="Photo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>
