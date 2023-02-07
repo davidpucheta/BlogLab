@@ -22,7 +22,7 @@ AS
 		UPDATE SET
 			TARGET.[Content] = SOURCE.[Content],
 			TARGET.[UpdateDate] = GETDATE()
-	WHEN NOT MATCHED BY TARGET
+	WHEN NOT MATCHED BY TARGET THEN
 		INSERT (
 			[ParentBlogCommentId],
 			[BlogId],
@@ -33,7 +33,7 @@ AS
 			SOURCE.[ParentBlogCommentId],
 			SOURCE.[BlogId],
 			SOURCE.[ApplicationUserId],
-			SOURCE.[Content],
+			SOURCE.[Content]
 		);
 
 	SELECT CAST(SCOPE_IDENTITY() AS INT);
