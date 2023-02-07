@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Blog\" />
     <Folder Include="BlogComment\" />
+    <Folder Include="Photo\" />
   </ItemGroup>
 
 </Project>
