@@ -86,6 +86,7 @@
     <Build Include="BlogLab\Stored Procedures\Blog_Upsert.sql" />
     <Build Include="BlogLab\Stored Procedures\BlogComment_Delete.sql" />
     <Build Include="BlogLab\Stored Procedures\BlogComment_Get.sql" />
+    <Build Include="BlogLab\Stored Procedures\BlogComment_GetAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BlogLab.SQL.refactorlog" />
