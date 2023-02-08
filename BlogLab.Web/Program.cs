@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddControllers();
 builder.Services.Configure<CloudinaryOptions>(builder.Configuration.GetSection("CloudinaryOptions"));
 
 builder.Services.AddBlogServices();
