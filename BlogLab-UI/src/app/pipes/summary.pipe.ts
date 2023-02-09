@@ -11,8 +11,6 @@ export class SummaryPipe implements PipeTransform {
     } else {
       return `${content.substring(0, characterLimit)}...`
     }
-
-
   }
 
 }
