@@ -81,7 +81,7 @@ public class BlogRepository : IBlogRepository
         return blogs.ToList();
     }
 
-    public async Task<Blog> GetAsync(int blogId)
+    public async Task<Blog?> GetAsync(int blogId)
     {
         await using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
         await connection.OpenAsync();
@@ -95,7 +95,7 @@ public class BlogRepository : IBlogRepository
         return blog;
     }
 
-    public async Task<Blog> UpsertAsync(BlogCreate blogCreate, int applicationUserId)
+    public async Task<Blog?> UpsertAsync(BlogCreate blogCreate, int applicationUserId)
     {
         var dataTable = new DataTable();
         dataTable.Columns.Add("BlogId", typeof(string));
