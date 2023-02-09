@@ -43,7 +43,7 @@ public class BlogCommentRepository : IBlogCommentRepository
         return blogComments.ToList();
     }
 
-    public async Task<BlogComment> GetAsync(int blogCommentId)
+    public async Task<BlogComment?> GetAsync(int blogCommentId)
     {
         await using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
         await connection.OpenAsync();
@@ -57,7 +57,7 @@ public class BlogCommentRepository : IBlogCommentRepository
         return blogComment;
     }
 
-    public async Task<BlogComment> UpsertAsync(BlogCommentCreate blogCommentCreate, int applicationUserId)
+    public async Task<BlogComment?> UpsertAsync(BlogCommentCreate blogCommentCreate, int applicationUserId)
     {
         var dataTable = new DataTable();
         dataTable.Columns.Add("BlogCommentId", typeof(int));
