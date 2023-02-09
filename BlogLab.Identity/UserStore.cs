@@ -4,9 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace BlogLab.Identity;
 
-public class UserStore :
-    IUserStore<ApplicationUserIdentity>,
-    IUserEmailStore<ApplicationUserIdentity>,
+public class UserStore : IUserEmailStore<ApplicationUserIdentity>,
     IUserPasswordStore<ApplicationUserIdentity>
 {
     private readonly IAccountRepository _accountRepository;
@@ -23,22 +21,25 @@ public class UserStore :
 
     public async Task<IdentityResult> DeleteAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        await Task.FromResult(0);
+        return new IdentityResult();
     }
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        GC.SuppressFinalize(this);
     }
 
     public async Task<ApplicationUserIdentity?> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        await Task.FromResult(0);
+        return null;
     }
 
     public async Task<ApplicationUserIdentity?> FindByIdAsync(string userId, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        await Task.FromResult(0);
+        return null;
     }
 
     public async Task<ApplicationUserIdentity?> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
@@ -122,8 +123,10 @@ public class UserStore :
         user.Username = userName ?? string.Empty;
         await Task.FromResult(0);
     }
+
     public async Task<IdentityResult> UpdateAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        await Task.FromResult(0);
+        return new IdentityResult();
     }
 }

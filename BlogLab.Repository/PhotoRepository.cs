@@ -43,7 +43,7 @@ public class PhotoRepository : IPhotoRepository
         return photos.ToList();
     }
 
-    public async Task<Photo> GetAsync(int photoId)
+    public async Task<Photo?> GetAsync(int photoId)
     {
         await using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
         await connection.OpenAsync();
@@ -57,7 +57,7 @@ public class PhotoRepository : IPhotoRepository
         return photo;
     }
 
-    public async Task<Photo> InsertAsync(PhotoCreate photoCreate, int applicationUserId)
+    public async Task<Photo?> InsertAsync(PhotoCreate photoCreate, int applicationUserId)
     {
         var dataTable = new DataTable();
         dataTable.Columns.Add("PublicId", typeof(string));

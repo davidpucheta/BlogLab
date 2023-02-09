@@ -1,11 +1,8 @@
 ﻿using BlogLab.Models.BlogComment;
-using BlogLab.Models.Photo;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Data;
-using Dapper;
-using BlogLab.Models.Account;
-using BlogLab.Models.Blog;
 
 namespace BlogLab.Repository;
 
@@ -87,7 +84,6 @@ public class BlogCommentRepository : IBlogCommentRepository
             },
             commandType: CommandType.StoredProcedure
         );
-
 
         return await GetAsync(blogCommentId ?? blogCommentCreate.BlogCommentId);
     }
