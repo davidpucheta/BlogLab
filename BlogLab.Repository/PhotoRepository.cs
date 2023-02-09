@@ -75,7 +75,11 @@ public class PhotoRepository : IPhotoRepository
 
         var newPhotoId = await connection.ExecuteScalarAsync<int>(
             "Photo_Insert",
-            new { Photo = dataTable.AsTableValuedParameter("dbo.PhotoType") },
+            new
+            {
+                Photo = dataTable.AsTableValuedParameter("dbo.PhotoType"),
+                ApplicationUserId = applicationUserId
+            },
             commandType: CommandType.StoredProcedure
         );
 
