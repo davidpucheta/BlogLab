@@ -11,6 +11,10 @@ using BlogLab.Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 // Add services to the container.
@@ -67,6 +71,8 @@ app.UseRouting();
 if (app.Environment.IsDevelopment())
 {
     app.UseCors(opts => opts.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 else
 {
