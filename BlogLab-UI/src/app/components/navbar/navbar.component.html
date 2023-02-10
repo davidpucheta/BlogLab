@@ -3,22 +3,23 @@
     <a class="navbar-brand" routerLink="/" routerLinkActive="active">
       BlogLab
     </a>
-    <button class="toggler"
+    <button
+      class="toggler"
       data-toggle="collpase"
       data-target="#navbarNav"
       (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="!isCollapsed"
       aria-controls="collapseBasic"
-      >
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse"
+    <div
+      class="collapse navbar-collapse"
       id="navbarNav"
       id="collapseBasic"
       [collapse]="isCollapsed"
-      >
-
+    >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a routerLink="/blogs" routerLinkActive="active" class="nav-link">
@@ -34,32 +35,36 @@
       </ul>
 
       <div class="btn-group" dropdown *ngIf="accountService.isLoggedIn()">
-
-        <button id="button-animated"
-        dropdownToggle
-        type="button"
-        class="btn btn-primary dropdown-toggle"
-        aria-controls="dropdown-animated">
-          Welcome {{accountService.currentUserValue?.username}}! <span class="caret"></span>
+        <button
+          id="button-animated"
+          dropdownToggle
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-animated"
+        >
+          Welcome {{ accountService.currentUserValue?.username }}!
+          <span class="caret"></span>
         </button>
 
-        <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu"
-        aria-labelledby="button-animated">
+        <ul
+          id="dropdown-animated"
+          *dropdownMenu
+          class="dropdown-menu"
+          role="menu"
+          aria-labelledby="button-animated"
+        >
           <li role="menuitem">
             <a class="dropdown-item" routerLink="/photo-album">Photo Album</a>
           </li>
           <li role="menuitem">
             <a class="dropdown-item" routerLink="/dashboard">Dashboard</a>
           </li>
-          <li role="divider dropdown-divider">
-          </li>
+          <li role="divider dropdown-divider"></li>
           <li role="menuitem">
             <a class="dropdown-item" (click)="logout()">Logout</a>
           </li>
         </ul>
       </div>
-
     </div>
-
   </div>
 </nav>
