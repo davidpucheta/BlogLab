@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CollapseModule } from "ngx-bootstrap/collapse";
+import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 
 import { ToastrModule } from "ngx-toastr";
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +25,7 @@ import { PhotoAlbumComponent } from './components/photo-album/photo-album.compon
 import { RegisterComponent } from './components/register/register.component';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { BlogEditComponent } from './components/blog-component/blog-edit/blog-edit.component';
 
 
 @NgModule({
@@ -42,7 +45,8 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     NavbarComponent,
     NotFoundComponent,
     PhotoAlbumComponent,
-    RegisterComponent
+    RegisterComponent,
+    BlogEditComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,10 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     HttpClientModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
-    })
+    }),
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
+
   ],
   providers: [
     HttpClient,
