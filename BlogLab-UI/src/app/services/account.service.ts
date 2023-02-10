@@ -12,16 +12,16 @@ import { ApplicationUser } from '../models/account/application-user.model';
 })
 export class AccountService {
 
-  private currentUserSubject$: BehaviorSubject<ApplicationUser>
+  private currentUserSubject$: BehaviorSubject<ApplicationUser>;
 
   constructor(
     private http: HttpClient
   ) {
-    this.currentUserSubject$ = new BehaviorSubject<ApplicationUser>(JSON.parse(localStorage.getItem('blogLab-currentUser')));
+    this.currentUserSubject$ = new BehaviorSubject<ApplicationUser>(JSON.parse(localStorage.getItem('blogLab-currentUser') || '{}'));
    }
 
    login(model: ApplicationUserLogin): Observable<ApplicationUser> {
-    return this.http.post(`${environment.webApi}/Account/login`, model).pipe(
+    return this.http.post<ApplicationUser>(`${environment.webApi}/Account/login`, model).pipe(
       map((user : ApplicationUser) => {
 
         if(user){
@@ -39,7 +39,7 @@ export class AccountService {
    }
 
    register(model: ApplicationUserCreate): Observable<ApplicationUser> {
-    return this.http.post(`${environment.webApi}/Account/register`, model).pipe(
+    return this.http.post<ApplicationUser>(`${environment.webApi}/Account/register`, model).pipe(
       map((user : ApplicationUser) => {
 
         if(user){
@@ -52,12 +52,12 @@ export class AccountService {
     )
    }
 
-   public get currentUserValue(): ApplicationUser {
+   public get currentUserValue(): ApplicationUser | null {
     return this.currentUserSubject$.value;
    }
 
    logout() {
     localStorage.removeItem('blogLab-currentUser');
-    this.currentUserSubject$.next(null);
+    this.currentUserSubject$.next(new ApplicationUser(0,'','','',''));
    }
 }
