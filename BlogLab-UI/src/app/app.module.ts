@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -53,12 +54,13 @@ import { BlogEditComponent } from './components/blog-component/blog-edit/blog-ed
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
     BsDropdownModule.forRoot(),
-    CollapseModule.forRoot(),
-
+    CollapseModule.forRoot()
   ],
   providers: [
     HttpClient,
