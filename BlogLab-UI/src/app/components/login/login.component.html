@@ -11,7 +11,7 @@
               'is-valid': !hasErrors('username') && isTouched('username')
             }" class="form-control form-control-lg" formControlName="username" placeholder="Username" />
 
-          <div *ngIf="hasError('username', 'required')" class="invalid-feddback">
+          <div *ngIf="hasError('username', 'required')" class="invalid-feedback">
             Username required
           </div>
           <div *ngIf="
@@ -28,12 +28,12 @@
               'is-valid': !hasErrors('password') && isTouched('password')
             }" class="form-control form-control-lg" formControlName="password" placeholder="Password" />
 
-          <div *ngIf="hasError('username', 'required')" class="invalid-feddback">
+          <div *ngIf="hasError('password', 'required')" class="invalid-feedback">
             Password required
           </div>
           <div *ngIf="
-              hasError('username', 'minlength') ||
-              hasError('username', 'maxlength')
+              hasError('password', 'minlength') ||
+              hasError('password', 'maxlength')
             " class="invalid-feedback">
             Must be between 10-50 characters
           </div>
