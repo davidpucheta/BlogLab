@@ -10,6 +10,7 @@
     <Folder Include="Blog\" />
     <Folder Include="BlogComment\" />
     <Folder Include="Exception\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Settings\" />
     <Folder Include="Photo\" />
   </ItemGroup>

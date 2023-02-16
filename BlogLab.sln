@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Identity", "BlogLab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Services", "BlogLab.Services\BlogLab.Services.csproj", "{6D53CEF9-03D5-405B-AD01-8B9DD0467651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLab.Blazor.UI", "BlogLab.Blazor.UI\BlogLab.Blazor.UI.csproj", "{066F770A-FB2F-4EBC-9234-EC0A03FD3E7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Blazor.UI", "BlogLab.Blazor.UI\BlogLab.Blazor.UI.csproj", "{066F770A-FB2F-4EBC-9234-EC0A03FD3E7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
